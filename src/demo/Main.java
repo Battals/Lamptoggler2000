@@ -36,16 +36,20 @@ public class Main {
             switch (userinput) {
 
                 case "h":
+                case "help":
                     Lamp.printHelp();
                     break;
                 case "q":
+                case "quit":
                     running = false;
                     break;
                 case "l":
+                case "list":
                     System.out.println(Lamp.getlampList());
                     break;
                 case "r":
-                    System.out.println("Which lamp do you want to remove? - type 'lampe1/5'");
+                case "remove":
+                    System.out.println("Which lamp do you want to remove? - type 'lampe1/10'");
                     String Uinput = input.nextLine();
                     if (Uinput.endsWith("1")) {
                         selectedLamp = lampe1;
@@ -72,9 +76,40 @@ public class Main {
                         selectedLamp.removeLamp(lampe5);
                         System.out.println("You removed lampe 5");
                         System.out.println(Lamp.getlampList());
+                    } else if (Uinput.endsWith("6")) {
+                        selectedLamp = lampe6;
+                        selectedLamp.removeLamp(lampe6);
+                        System.out.println("You removed lampe 6");
+                        System.out.println(Lamp.getlampList());
+                        break;
                     }
-                    break;
+                     else if (Uinput.endsWith("7")) {
+                        selectedLamp = lampe7;
+                        selectedLamp.removeLamp(lampe7);
+                        System.out.println("You removed lampe 7");
+                        System.out.println(Lamp.getlampList());
+                        break;}
+                        else if (Uinput.endsWith("8")) {
+                        selectedLamp = lampe8;
+                        selectedLamp.removeLamp(lampe8);
+                        System.out.println("You removed lampe 8");
+                        System.out.println(Lamp.getlampList());
+                        break;}
+                        else if (Uinput.endsWith("9")) {
+                        selectedLamp = lampe9;
+                        selectedLamp.removeLamp(lampe9);
+                        System.out.println("You removed lampe 9");
+                        System.out.println(Lamp.getlampList());
+                        break;}
+                        else if (Uinput.endsWith("10")) {
+                        selectedLamp = lampe10;
+                        selectedLamp.removeLamp(lampe10);
+                        System.out.println("You removed lampe 10");
+                        System.out.println(Lamp.getlampList());
+                        break;
+                    }
                 case "a":
+                case "add":
                     System.out.println("Which lamp do you want to add? - type 'lampe1/10'");
                     String uinput = input.nextLine();
                     if (uinput.endsWith("6")) {
@@ -107,8 +142,40 @@ public class Main {
                         System.out.println("You added lampe 10");
                         System.out.println(Lamp.getlampList());
                         break;
+                    } else if (uinput.endsWith("5")) {
+                        selectedLamp = lampe5;
+                        selectedLamp.addLamp(lampe5);
+                        System.out.println("You added lampe 5");
+                        System.out.println(Lamp.getlampList());
+                        break;
+                    } else if (uinput.endsWith("4")) {
+                        selectedLamp = lampe4;
+                        selectedLamp.addLamp(lampe4);
+                        System.out.println("You added lampe 4");
+                        System.out.println(Lamp.getlampList());
+                        break;
+                    } else if (uinput.endsWith("3")) {
+                        selectedLamp = lampe3;
+                        selectedLamp.addLamp(lampe3);
+                        System.out.println("You added lampe 3");
+                        System.out.println(Lamp.getlampList());
+                        break;
+                    } else if (uinput.endsWith("2")) {
+                        selectedLamp = lampe2;
+                        selectedLamp.addLamp(lampe2);
+                        System.out.println("You added lampe 2");
+                        System.out.println(Lamp.getlampList());
+                        break;
+                    } else if (uinput.endsWith("1")) {
+                        selectedLamp = lampe1;
+                        selectedLamp.addLamp(lampe1);
+                        System.out.println("You added lampe 1");
+                        System.out.println(Lamp.getlampList());
+                        break;
+
                     }
                 case "t":
+                case "toggle":
                     System.out.println("Which lamp do you want to switch on/off?");
                     String t = input.nextLine();
                     if (t.endsWith("1")) {
@@ -120,19 +187,30 @@ public class Main {
                         selectedLamp = lampe2;
                         selectedLamp.trykPåKontakt();
                         System.out.println("You switched lampe 2 on/off");
-                        System.out.println(Lamp.getlampList());}
-                    else if (t.endsWith("3")) {
+                        System.out.println(Lamp.getlampList());
+                    } else if (t.endsWith("3")) {
                         selectedLamp = lampe3;
                         selectedLamp.trykPåKontakt();
                         System.out.println("You switched lampe 3 on/off");
                         System.out.println(Lamp.getlampList());
-
+                    } else if (t.endsWith("4")) {
+                        selectedLamp = lampe4;
+                        selectedLamp.trykPåKontakt();
+                        System.out.println("You switched lampe 4 on/off");
+                        System.out.println(Lamp.getlampList());
+                    } else if (t.endsWith("5")) {
+                        selectedLamp = lampe5;
+                        selectedLamp.trykPåKontakt();
+                        System.out.println("You switched lampe 5 on/off");
+                        System.out.println(Lamp.getlampList());
                     }
 
-
+                    }
             }
 
 
         }
+
+
     }
-}
+

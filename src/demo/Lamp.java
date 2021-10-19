@@ -32,13 +32,11 @@ public class Lamp {
     public static void printHelp() {
         System.out.println("Commands available are: ");
         System.out.println("""
-                \t q - to quit the lamptoggler
-                \t y -                
-                \t l - to get lamp list and status
-                \t a - to add a new lamp
-                \t r - to remove a lamp
-                \t t - to toggle an existing lamp
-                \t ? - to check status for an existing lamp""");
+                \t 'q'/'quit' - to quit the lamptoggler               
+                \t 'l'/'list' - to get lamp list and status
+                \t 'a'/'add' - to add a new lamp
+                \t 'r'/'remove' - to remove a lamp
+                \t 't'/'toggle' - to toggle an existing lamp""");
     }
     public static ArrayList<Lamp> getlampList(){
         return lampList;
@@ -52,6 +50,9 @@ public void removeLamp(Lamp x){
 public void addLamp(Lamp z){
    Lamp.lampList.add(z);
 }
+
 }
+
+
 
 
